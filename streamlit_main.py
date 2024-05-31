@@ -17,10 +17,16 @@ styled_caption = """
     Insurance is our Job
 </p>
 """
+# HTML/CSS to center the image
+centered_image_html = f"""
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+    <img src="data:image/jpeg;base64,{img_str}" width="600" style="margin-bottom: 20px;">
+</div>
+"""
 image = Image.open('main_image_insurance.jpeg')
-st.image(image, width=600)
+st.image(centered_image_html, width=600)
 st.markdown(styled_caption, unsafe_allow_html=True)
-st.markdown("<h1 style='text-align: center; font-family: Arial, sans-serif; font-size: 20px; color: blue;font-weight: bold;'main_image_insurance.jpeg", unsafe_allow_html=True)
+#st.markdown("<h1 style='text-align: center; font-family: Arial, sans-serif; font-size: 20px; color: blue;font-weight: bold;'main_image_insurance.jpeg", unsafe_allow_html=True)
 
 
 st.markdown("**Please fill the below form :**")
