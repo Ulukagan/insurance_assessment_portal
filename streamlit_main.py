@@ -26,7 +26,7 @@ st.markdown("**Please fill the below form :**")
 with st.form(key="Form :", clear_on_submit = True):
     Name = st.text_input("Name : ")
     Email = st.text_input("Email ID : ")
-    File = st.file_uploader(label = "Upload file", type=["pdf", "png", "jpg"])
+    File = st.file_uploader(label = "Upload file", type=["pdf", "png"])
     Submit = st.form_submit_button(label='Submit')
     
 
