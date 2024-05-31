@@ -18,7 +18,8 @@ styled_caption = """
 </p>
 """
 image = Image.open('main_image_insurance.jpeg')
-st.image(image, styled_caption, width=600)
+st.image(image, width=600)
+st.markdown(styled_caption, unsafe_allow_html=True)
 st.markdown("<h1 style='text-align: center; font-family: Arial, sans-serif; font-size: 20px; color: blue;font-weight: bold;'main_image_insurance.jpeg", unsafe_allow_html=True)
 
 
