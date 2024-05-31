@@ -12,8 +12,8 @@ st.set_page_config(
     )
 
 image = Image.open('main_image_insurance.jpeg')
-st.image(image, caption='Insurance is our Job', width=300)
-st.markdown("<h1 style='text-align: right; color: red;'main_image_insurance.jpeg", unsafe_allow_html=True)
+st.image(image, caption='Insurance is our Job', width=500)
+st.markdown("<h1 style='text-align: center; color: red;'main_image_insurance.jpeg", unsafe_allow_html=True)
 
 
 st.markdown("**Please fill the below form :**")
