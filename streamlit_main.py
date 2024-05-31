@@ -11,6 +11,23 @@ st.set_page_config(
         page_icon="insurance_page_icon.png"
     )
 
+# HTML/CSS to center content
+center_content = """
+<div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh;">
+    <img src="main_image_insurance.jpeg" alt="Main Image" style="margin-bottom: 20px;">
+    <h1 style="text-align: center; color: red;">
+        This is a centered header with red text
+    </h1>
+    <p style="text-align: center; font-family: Arial, sans-serif; font-size: 20px; color: blue; font-weight: bold;">
+        This is a centered paragraph with blue text, Arial font, size 20px, and bold formatting.
+    </p>
+</div>
+"""
+
+# Embed the HTML in the Streamlit app
+st.markdown(center_content, unsafe_allow_html=True)
+
+
 image = Image.open('main_image_insurance.jpeg')
 st.image(image, caption='Insurance is our Job', width=600)
 st.markdown("<h1 style='text-align: center; font-family: Arial, sans-serif; font-size: 20px; color: blue;font-weight: bold;'main_image_insurance.jpeg", unsafe_allow_html=True)
