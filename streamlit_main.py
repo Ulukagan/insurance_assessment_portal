@@ -40,11 +40,15 @@ if Submit :
 
     # Save uploaded file to '/Users/kaan/Desktop/insurance_app/temp' folder.
     save_folder = '/Users/kaan/Desktop/insurance_app/temp'
-    #save_path = Path(save_folder, File.name)
+    save_path = Path(save_folder, File.name)
     with open(save_folder, mode='wb') as w:
         w.write(File.getvalue())
 
     if save_path.exists():
         st.success(f'File {File.name} is successfully saved!')
+
+# Debugging: Print the path to verify
+st.write(f"Save folder: {save_folder}")
+st.write(f"Save path: {save_path if uploaded_file is not None else 'No file uploaded yet'}")
 
 
