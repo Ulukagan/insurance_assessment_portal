@@ -27,7 +27,7 @@ st.markdown("**Please fill the below blanks and upload your documents to be anay
 with st.form(key="Form :", clear_on_submit = True):
     Name = st.text_input("Name and Surname : ")
     Email = st.text_input("Email : ")
-    File = st.file_uploader(label = "Upload file", type=["pdf", "png","jpeg"])
+    File = st.file_uploader(label = "Upload file", type=["pdf", "png","jpeg"], accept_multiple_files=True)
     Submit = st.form_submit_button(label='Submit')
     
 
@@ -36,7 +36,7 @@ st.markdown("**Extracted Information based on your Entry :** ")
 if File is not None:
    # st.markdown("**The file is sucessfully Uploaded.**")
         # Save the uploaded file
-    save_folder = 'C:/Users/kaan/Desktop/insurance_app/temp'
+    save_folder = '/Users/kaan/Desktop/insurance_app/temp'
     save_path = os.path.join(save_folder, File.name)
     try:
         with open(save_path, 'wb') as f:
