@@ -28,21 +28,31 @@ with st.form(key="Form :", clear_on_submit = True):
     Name = st.text_input("Name and Surname : ")
     Email = st.text_input("Email : ")
     File = st.file_uploader(label = "Upload file", type=["pdf", "png","jpeg"])
-    Submit = st.form_submit_button(label='Submit')
+    uploaded_file = st.form_submit_button(label='Submit')
     
 
 st.markdown("**Extracted Information based on your Entry :** ")
 #st.metric(label = "Name :", value = Name)
 #st.metric(label = "Email ID :", value = Email)
 
-if Submit :
-    st.markdown("**The file is sucessfully Uploaded.**")
+if uploaded_file is not None:
+   # st.markdown("**The file is sucessfully Uploaded.**")
+        # Save the uploaded file
+    save_folder = '/Users/kaan/Desktop/insurance_app/temp'
+    save_path = os.path.join(save_folder, uploaded_file.name)
+    try:
+        with open(save_path, 'wb') as f:
+            f.write(uploaded_file.getbuffer())
+        st.success(f"File saved at {save_path}")
+    except Exception as e:
+        st.error(f"Error saving file: {e}")
 
     # Save uploaded file to '/Users/kaan/Desktop/insurance_app/temp' folder.
-    save_folder = '/Users/kaan/Desktop/insurance_app/temp'
-    save_path = Path(save_folder, File.name)
-    with open(save_folder, mode='wb') as w:
-        w.write(File.getvalue())
+    #save_folder = '/Users/kaan/Desktop/insurance_app/temp'
+    #save_path = Path(save_folder, File.name)
+    #with open(save_folder, mode='wb') as w:
+        #   w.write(File.getvalue())
+
 
     if save_path.exists():
         st.success(f'File {File.name} is successfully saved!')
