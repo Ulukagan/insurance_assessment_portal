@@ -7,7 +7,8 @@ import json
 import os
 import openai
 
-openai.api_key = 'sk-proj-hwcgaemjjTLHK2qtrzMMT3BlbkFJeqiNxMTwLBZ5RqnIwVxP'
+openai.api_key = st.secrets["OPENAI_API_KEY"]
+#'sk-proj-hwcgaemjjTLHK2qtrzMMT3BlbkFJeqiNxMTwLBZ5RqnIwVxP'
 
 st.set_page_config(
         page_title="Your Insurance Partner",
