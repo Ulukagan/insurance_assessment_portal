@@ -33,7 +33,7 @@ with st.form(key="Form :", clear_on_submit = True):
 
 st.markdown("**Extracted Information based on your Entry :** ")
 
-if File is not None and len(Files) >0:
+if Files is not None and len(Files) >0:
    # st.markdown("**The file is sucessfully Uploaded.**")
         # Save the uploaded file
     save_folder = '/Users/kaan/Desktop/insurance_app/temp'
