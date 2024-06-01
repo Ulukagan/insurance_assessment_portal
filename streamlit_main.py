@@ -7,8 +7,7 @@ import json
 import os
 import openai
 
-#get open_ai key from the environment 
-openai.api_key = os.getenv('OPENAI_API_KEY')
+openai.api_key = 'sk-proj-hwcgaemjjTLHK2qtrzMMT3BlbkFJeqiNxMTwLBZ5RqnIwVxP'
 
 st.set_page_config(
         page_title="Your Insurance Partner",
