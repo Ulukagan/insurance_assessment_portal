@@ -5,7 +5,10 @@ from PIL import Image
 import requests
 import json
 import os
+import openai
 
+#get open_ai key from the environment 
+openai.api_key = os.getenv('OPENAI_API_KEY')
 
 st.set_page_config(
         page_title="Your Insurance Partner",
@@ -46,3 +49,31 @@ if Files is not None and len(Files) >0:
             except Exception as e:
                 st.error(f"Error saving file: {e}")
 
+# Chatbot Interface
+st.markdown("**Chat with our Insurance Chatbot:**")
+if 'messages' not in st.session_state:
+    st.session_state.messages = []
+
+with st.form(key='chat_form', clear_on_submit=True):
+    user_input = st.text_input("You: ")
+    submit_chat = st.form_submit_button(label='Send')
+
+if submit_chat and user_input:
+    # Send user input to OpenAI and get the response
+    response = openai.Completion.create(
+        engine="text-davinci-003",
+        prompt=user_input,
+        max_tokens=150
+    )
+    bot_response = response.choices[0].text.strip()
+    
+    # Store messages in session state
+    st.session_state.messages.append(("You", user_input))
+    st.session_state.messages.append(("Bot", bot_response))
+
+# Display chat history
+for sender, message in st.session_state.messages:
+    if sender == "You":
+        st.markdown(f"**You**: {message}")
+    else:
+        st.markdown(f"**Bot**: {message}")
