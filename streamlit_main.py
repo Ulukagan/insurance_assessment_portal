@@ -24,15 +24,15 @@ st.markdown(styled_caption, unsafe_allow_html=True)
 
 st.markdown("**Please fill the below form :**")
 with st.form(key="Form :", clear_on_submit = True):
-    Name = st.text_input("Name : ")
-    Email = st.text_input("Email ID : ")
+    Name = st.text_input("Name and Surname : ")
+    Email = st.text_input("Email : ")
     File = st.file_uploader(label = "Upload file", type=["pdf", "png","jpeg"])
     Submit = st.form_submit_button(label='Submit')
     
 
-st.subheader("Details : ")
-st.metric(label = "Name :", value = Name)
-st.metric(label = "Email ID :", value = Email)
+st.subheader("Extracted Information based on your Entry : ")
+#st.metric(label = "Name :", value = Name)
+#st.metric(label = "Email ID :", value = Email)
 
 if Submit :
     st.markdown("**The file is sucessfully Uploaded.**")
