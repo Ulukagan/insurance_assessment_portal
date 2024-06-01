@@ -39,7 +39,7 @@ if uploaded_file is not None:
    # st.markdown("**The file is sucessfully Uploaded.**")
         # Save the uploaded file
     save_folder = '/Users/kaan/Desktop/insurance_app/temp'
-    save_path = os.path.join(save_folder, uploaded_file.name)
+    save_path = os.path.join(save_folder, File.name)
     try:
         with open(save_path, 'wb') as f:
             f.write(uploaded_file.getbuffer())
