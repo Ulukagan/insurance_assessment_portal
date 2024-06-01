@@ -35,10 +35,8 @@ st.markdown("**Extracted Information based on your Entry :** ")
 
 if Files is not None and len(Files) >0:
    # st.markdown("**The file is sucessfully Uploaded.**")
-        # Save the uploaded file
+   # Save the uploaded file
     save_folder = '/Users/kaan/Desktop/insurance_app/temp'
-    if not os.path.exists(save_folder):
-        os.makedirs(save_folder)
     for uploaded_file in Files:
             save_path = os.path.join(save_folder, uploaded_file.name)
             try:
@@ -47,14 +45,4 @@ if Files is not None and len(Files) >0:
                 st.success(f"File saved at {save_path}")
             except Exception as e:
                 st.error(f"Error saving file: {e}")
-
-    # Save uploaded file to '/Users/kaan/Desktop/insurance_app/temp' folder.
-    #save_folder = '/Users/kaan/Desktop/insurance_app/temp'
-    #save_path = Path(save_folder, File.name)
-    #with open(save_folder, mode='wb') as w:
-        #   w.write(File.getvalue())
-
-
-    #if save_path.exists():
-     #   st.success(f'File {File.name} is successfully saved!')
 
