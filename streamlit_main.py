@@ -27,23 +27,24 @@ st.markdown("**Please fill the below blanks and upload your documents to be anay
 with st.form(key="Form :", clear_on_submit = True):
     Name = st.text_input("Name and Surname : ")
     Email = st.text_input("Email : ")
-    File = st.file_uploader(label = "Upload file", type=["pdf", "png","jpeg"], accept_multiple_files=True)
+    Files = st.file_uploader(label = "Upload file", type=["pdf", "png","jpeg"], accept_multiple_files=True)
     Submit = st.form_submit_button(label='Submit')
     
 
 st.markdown("**Extracted Information based on your Entry :** ")
 
-if File is not None:
+if File is not None and len(Files) >0:
    # st.markdown("**The file is sucessfully Uploaded.**")
         # Save the uploaded file
     save_folder = '/Users/kaan/Desktop/insurance_app/temp'
-    save_path = os.path.join(save_folder, File.name)
-    try:
-        with open(save_path, 'wb') as f:
-            f.write(uploaded_file.getbuffer())
-        st.success(f"File saved at {save_path}")
-    except Exception as e:
-        st.error(f"Error saving file: {e}")
+    for uploaded_file in Files:
+            save_path = os.path.join(save_folder, uploaded_file.name)
+            try:
+                with open(save_path, 'wb') as f:
+                    f.write(uploaded_file.getbuffer())
+                st.success(f"File saved at {save_path}")
+            except Exception as e:
+                st.error(f"Error saving file: {e}")
 
     # Save uploaded file to '/Users/kaan/Desktop/insurance_app/temp' folder.
     #save_folder = '/Users/kaan/Desktop/insurance_app/temp'
