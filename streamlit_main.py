@@ -4,6 +4,7 @@ from pathlib import Path
 from PIL import Image
 import requests
 import json
+import os
 
 
 st.set_page_config(
@@ -39,8 +40,8 @@ if Submit :
 
     # Save uploaded file to '/Users/kaan/Desktop/insurance_app/temp' folder.
     save_folder = '/Users/kaan/Desktop/insurance_app/temp'
-    save_path = Path(save_folder, File.name)
-    with open(save_path, mode='wb') as w:
+    #save_path = Path(save_folder, File.name)
+    with open(save_folder, mode='wb') as w:
         w.write(File.getvalue())
 
     if save_path.exists():
