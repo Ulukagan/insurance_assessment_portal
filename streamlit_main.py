@@ -30,7 +30,7 @@ with st.form(key="Form :", clear_on_submit = True):
     Submit = st.form_submit_button(label='Submit')
     
 
-st.markdown("Extracted Information based on your Entry : ")
+st.markdown("**Extracted Information based on your Entry :** ")
 #st.metric(label = "Name :", value = Name)
 #st.metric(label = "Email ID :", value = Email)
 
