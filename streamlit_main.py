@@ -55,8 +55,3 @@ if File is not None:
     if save_path.exists():
         st.success(f'File {File.name} is successfully saved!')
 
-# Debugging: Print the path to verify
-st.write(f"Save folder: {save_folder}")
-st.write(f"Save path: {save_path if uploaded_file is not None else 'No file uploaded yet'}")
-
-
