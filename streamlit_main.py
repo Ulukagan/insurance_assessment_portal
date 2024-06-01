@@ -37,6 +37,8 @@ if Files is not None and len(Files) >0:
    # st.markdown("**The file is sucessfully Uploaded.**")
         # Save the uploaded file
     save_folder = '/Users/kaan/Desktop/insurance_app/temp'
+    if not os.path.exists(save_folder):
+        os.makedirs(save_folder)
     for uploaded_file in Files:
             save_path = os.path.join(save_folder, uploaded_file.name)
             try:
