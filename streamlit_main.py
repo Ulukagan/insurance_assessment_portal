@@ -32,10 +32,8 @@ with st.form(key="Form :", clear_on_submit = True):
     
 
 st.markdown("**Extracted Information based on your Entry :** ")
-#st.metric(label = "Name :", value = Name)
-#st.metric(label = "Email ID :", value = Email)
 
-if uploaded_file is not None:
+if File is not None:
    # st.markdown("**The file is sucessfully Uploaded.**")
         # Save the uploaded file
     save_folder = '/Users/kaan/Desktop/insurance_app/temp'
