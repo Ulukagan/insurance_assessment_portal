@@ -38,7 +38,7 @@ if File is not None:
         # Save the uploaded file
     save_folder = '/Users/kaan/Desktop/insurance_app/temp'
     if not os.path.exists(save_folder):
-    os.makedirs(save_folder)
+            os.makedirs(save_folder)
     save_path = os.path.join(save_folder, File.name)
     try:
         with open(save_path, 'wb') as f:
