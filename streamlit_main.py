@@ -36,9 +36,7 @@ st.markdown("**Extracted Information based on your Entry :** ")
 if File is not None:
    # st.markdown("**The file is sucessfully Uploaded.**")
         # Save the uploaded file
-    save_folder = '/Users/kaan/Desktop/insurance_app/temp'
-    if not os.path.exists(save_folder):
-            os.makedirs(save_folder)
+    save_folder = 'C:/Users/kaan/Desktop/insurance_app/temp'
     save_path = os.path.join(save_folder, File.name)
     try:
         with open(save_path, 'wb') as f:
