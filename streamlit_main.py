@@ -37,8 +37,8 @@ st.markdown("**Extracted Information based on your Entry :** ")
 if Submit :
     st.markdown("**The file is sucessfully Uploaded.**")
 
-    # Save uploaded file to 'F:/tmp' folder.
-    save_folder = 'F:/tmp'
+    # Save uploaded file to '/Users/kaan/Desktop/insurance_app/temp' folder.
+    save_folder = '/Users/kaan/Desktop/insurance_app/temp'
     save_path = Path(save_folder, File.name)
     with open(save_path, mode='wb') as w:
         w.write(File.getvalue())
