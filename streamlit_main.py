@@ -1,5 +1,4 @@
 import streamlit as st
-#import joblib
 from pathlib import Path
 from PIL import Image
 import requests
@@ -68,7 +67,7 @@ with st.form(key='chat_form', clear_on_submit=True):
 if submit_chat and user_input:
     # Send user input to OpenAI and get the response
     response = openai.Completion.create(
-        engine="text-davinci-003",
+        model="gpt-3.5-turbo",
         prompt=user_input,
         max_tokens=150
     )
