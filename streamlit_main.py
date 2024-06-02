@@ -7,7 +7,11 @@ import json
 import os
 import openai
 
-openai.api_key = st.secrets["OPENAI_API_KEY"]
+api_key = st.secrets["OPENAI_API_KEY"]
+if not api_key:
+    st.error("OpenAI API key not found in Streamlit secrets.")
+else:
+    openai.api_key = api_key
 #'sk-proj-hwcgaemjjTLHK2qtrzMMT3BlbkFJeqiNxMTwLBZ5RqnIwVxP'
 
 st.set_page_config(
