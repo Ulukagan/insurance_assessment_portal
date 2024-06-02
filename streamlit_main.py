@@ -12,7 +12,7 @@ if not api_key:
     st.error("OpenAI API key not found in Streamlit secrets.")
 else:
     openai.api_key = api_key
-#'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'
+#''
 
 st.set_page_config(
         page_title="Your Insurance Partner",
