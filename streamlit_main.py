@@ -5,11 +5,9 @@ from PIL import Image
 import requests
 import json
 import os
-from openai import OpenAI
+import openai
 
-client = OpenAI(
-  api_key=st.secrets['OPENAI_API_KEY'])
-#openai.api_key = st.secrets["OPENAI_API_KEY"]
+openai.api_key = st.secrets["OPENAI_API_KEY"]
 #'sk-proj-hwcgaemjjTLHK2qtrzMMT3BlbkFJeqiNxMTwLBZ5RqnIwVxP'
 
 st.set_page_config(
@@ -62,8 +60,7 @@ with st.form(key='chat_form', clear_on_submit=True):
 
 if submit_chat and user_input:
     # Send user input to OpenAI and get the response
-    client = OpenAI()
-    response = client.Completion.create(
+    response = openai.Completion.create(
         engine="text-davinci-003",
         prompt=user_input,
         max_tokens=150
