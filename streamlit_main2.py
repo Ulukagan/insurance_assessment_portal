@@ -64,13 +64,9 @@ if Files is not None and len(Files) >0:
         #     st.success(f"File saved at {save_path}")
         # except Exception as e:
         #     st.error(f"Error saving file: {e}")
-     # Upload to Google Cloud Storage
-
-        # Read file content into a BytesIO object
-        #file_content = BytesIO(uploaded_file.getvalue())
         
-        destination_blob_name = uploaded_file.name
         # Upload the file to GCS
+        destination_blob_name = uploaded_file.name
         try:
             gcs_url = upload_to_gcs(GCS_BUCKET_NAME, temp_file_path,destination_blob_name)
             st.success(f"File uploaded to {gcs_url}")
