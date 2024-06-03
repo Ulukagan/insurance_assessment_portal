@@ -13,14 +13,14 @@ st.set_page_config(
 # Custom styled caption using HTML
 styled_caption = """
 <p style="text-align: center; font-family: Arial, sans-serif; font-size: 14px; color: blue; font-weight: bold;">
-    Your Best Insurance AI-Partner...
+           Your Best Insurance AI-Partner...
 </p>
 """
 
 left_co, cent_co,last_co = st.columns(3)
 image = Image.open('main_image_insurance.jpeg')
 with cent_co:
-    st.image(image, width=300)
+    st.image(image, width=280)
 
 st.markdown(styled_caption, unsafe_allow_html=True)
 
