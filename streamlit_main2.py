@@ -13,7 +13,7 @@ st.set_page_config(
 # Custom styled caption using HTML
 styled_caption = """
 <p style="text-align: center; font-family: Arial, sans-serif; font-size: 13px; color: blue; font-weight: bold;">
-    Where agility meets expertise!
+    Your Best Insurance AI-Partner! 
 </p>
 """
 left_co, cent_co,last_co = st.columns(3)
