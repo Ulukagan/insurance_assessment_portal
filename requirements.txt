@@ -7,5 +7,5 @@ google-cloud-core==2.2.1
 google-cloud-trace==1.5.1
 googleapis-common-protos==1.54.0
 google-cloud-bigquery
-google-cloud-storage>=2.10.0
+google-cloud-storage
 
