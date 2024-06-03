@@ -11,12 +11,13 @@ st.set_page_config(
     )
 
 # Custom styled caption using HTML
-with cent_co:
-        styled_caption = """
-        <p style="text-align: cent_co; font-family: Arial, sans-serif; font-size: 13px; color: blue; font-weight: bold;">
-            Your Best Insurance AI-Partner! 
+styled_caption = """
+<div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+        <p style="font-family: Arial, sans-serif; font-size: 13px; color: blue; font-weight: bold;">
+                Your Best Insurance AI-Partner! 
         </p>
-        """
+</div>
+"""
 left_co, cent_co,last_co = st.columns(3)
 image = Image.open('main_image_insurance.jpeg')
 with cent_co:
