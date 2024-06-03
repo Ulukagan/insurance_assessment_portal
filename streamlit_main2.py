@@ -13,7 +13,7 @@ st.set_page_config(
 # Custom styled caption using HTML
 styled_caption = """
 <p style="text-align: center; font-family: Arial, sans-serif; font-size: 14px; color: blue; font-weight: bold;">
-           Your Best Insurance AI-Partner...
+           Your Best Insurance AI-Partner
 </p>
 """
 
