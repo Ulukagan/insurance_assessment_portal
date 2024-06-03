@@ -16,8 +16,12 @@ styled_caption = """
     Insurance is our Job
 </p>
 """
+left_co, cent_co,last_co = st.columns(3)
 image = Image.open('main_image_insurance.jpeg')
-st.image(image, width=500)
+with cent_co:
+    st.image(image, width=300)
+#st.image(image, width=300)
+
 st.markdown(styled_caption, unsafe_allow_html=True)
 #st.markdown("<h1 style='text-align: center; font-family: Arial, sans-serif; font-size: 20px; color: blue;font-weight: bold;'main_image_insurance.jpeg", unsafe_allow_html=True)
 
