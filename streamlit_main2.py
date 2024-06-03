@@ -23,7 +23,7 @@ with cent_co:
 #st.image(image, width=300)
 
 st.markdown(styled_caption, unsafe_allow_html=True)
-#st.markdown("<h1 style='text-align: center; font-family: Arial, sans-serif; font-size: 20px; color: blue;font-weight: bold;'main_image_insurance.jpeg", unsafe_allow_html=True)
+#st.markdown("<h1 style='text-align: center; font-family: Arial, sans-serif; font-size: 10px; color: blue;font-weight: bold;'main_image_insurance.jpeg", unsafe_allow_html=True)
 
 st.markdown("**Please fill the below blanks and upload your documents to be anaylzed :**")
 with st.form(key="Form :", clear_on_submit = True):
