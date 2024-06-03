@@ -20,7 +20,7 @@ styled_caption = """
 left_co, cent_co,last_co = st.columns(3)
 image = Image.open('main_image_insurance.jpeg')
 with cent_co:
-    st.image(image, width=280)
+    st.image(image, width=300)
 
 st.markdown(styled_caption, unsafe_allow_html=True)
 
