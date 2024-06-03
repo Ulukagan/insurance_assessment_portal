@@ -11,19 +11,18 @@ st.set_page_config(
     )
 
 # Custom styled caption using HTML
-styled_caption = """
-<p style="text-align: center; font-family: Arial, sans-serif; font-size: 13px; color: blue; font-weight: bold;">
-    Your Best Insurance AI-Partner! 
-</p>
-"""
+with cent_co:
+        styled_caption = """
+        <p style="text-align: cent_co; font-family: Arial, sans-serif; font-size: 13px; color: blue; font-weight: bold;">
+            Your Best Insurance AI-Partner! 
+        </p>
+        """
 left_co, cent_co,last_co = st.columns(3)
 image = Image.open('main_image_insurance.jpeg')
 with cent_co:
     st.image(image, width=300)
-#st.image(image, width=300)
 
 st.markdown(styled_caption, unsafe_allow_html=True)
-#st.markdown("<h1 style='text-align: center; font-family: Arial, sans-serif; font-size: 10px; color: blue;font-weight: bold;'main_image_insurance.jpeg", unsafe_allow_html=True)
 
 st.markdown("**Please fill the below blanks and upload your documents to be anaylzed :**")
 with st.form(key="Form :", clear_on_submit = True):
@@ -38,7 +37,7 @@ st.markdown("**Extracted Information based on your Entry :** ")
 if Files is not None and len(Files) >0:
    # st.markdown("**The file is sucessfully Uploaded.**")
    # Save the uploaded file
-    save_folder = '/Users/kaan/Desktop/insurance_app/temp'
+    save_folder = '/Users/kaan/Desktop/insurance_app/temp' #add a directory or path to save the uploaded documents
     for uploaded_file in Files:
             save_path = os.path.join(save_folder, uploaded_file.name)
             try:
